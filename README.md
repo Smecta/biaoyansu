@@ -75,3 +75,5 @@ new ssh key 添加
 git remote remove origin 
 添加 远程 origin
 git remote add origin git@github.com:Smecta/biaoyansu.git
+
+切换到dev分支

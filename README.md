@@ -59,6 +59,19 @@ git checkout -b b1 创建b1分支，进入b1分支
     origin 默认拉取远程仓库，除非更改，否则不用添加
 
 
+远程请求pull request 提交
+场景是很多开发者，开发者不具有修改master分支权限，这些开发者提交dev分支，无法修改主干分支，只能通过pull request 请求合并主干分支
+
 添加SSH免密登录
 打开github的 setting 找到   SSH keys and GPG keys 
 new ssh key 添加
+电脑端输入 ssh-keygen 生成 id_rsa.pub
+找到路径 cat /Users/user/.ssh/id_rsa.pub
+复制黏贴到 github上
+重新添加 
+查看 远程 origin 状态 
+    git remote -v 
+移除 远程 origin
+git remote remove origin 
+添加 远程 origin
+git remote add origin git@github.com:Smecta/biaoyansu.git

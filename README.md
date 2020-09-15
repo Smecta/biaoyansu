@@ -77,3 +77,25 @@ git remote remove origin
 git remote add origin git@github.com:Smecta/biaoyansu.git
 
 切换到dev分支
+
+有事在我们本地修改了部分文件后需要提交代码，这时需要先从远端把代码拉下来（pull），如果你修改的内容跟远端库的修改冲突了，则用git的图形界面用pull操作是无法操作的，这时我们需要用命令行（git bash）的方式来完成代码的更新。
+
+1、git status
+
+先看下自己修改的文件是哪些；
+
+2、git stash
+
+用这个命令先把代码缓存起来；
+
+3、git pull
+
+这时再用pull命令把远端的代码拉下来；
+
+4、git stash pop
+
+远端代码拉回来后再用这个命令把放到缓存中的代码强行merge回来；
+
+5、git status
+
+再看下拉回来后是否有冲突文件，如果没有冲突文件编译后提交即可，如果有冲突文件解决验证后再编译重提提交即可；

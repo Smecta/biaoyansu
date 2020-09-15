@@ -1,32 +1,31 @@
 // 请将以下所有题目的解封装在函数里。
 
 // 遍历[2, 4, 6, 8, 10]并将它们加起来。
-const list = [2, 4, 6, 8, 10]
-let num = 0
-for (let i=0; i<list.length; i++) {
+// const list = [2, 4, 6, 8, 10]
+var list = [2, 4, 6, 8, 10,]
+let num = 0 
+var i
+for (i=0; i<list.length; i++) {
     num = num + list[i]
+    // var a = list[i]
+    // num += list[i]
 }
-console.log(num)
+console.log("第一题答案： "+num)
+
 
 // 遍历['y', 'o', 'o', 'o']并将它们连接起来。
-const list1 = ['y', 'o', 'o', 'o']
+const list1 = ['y', 'o', 'o', 'o',"段枕朋"]
 let str = ""
 for (let i=0; i<list1.length; i++){
     // str = str +list1[i]
     str += list1[i]
 }
-console.log(str)
+console.log("第二题答案："+str)
+
+
 // 遍历[1, 3, 2, 7, 6]并找出所有的偶数，将找到的所有偶数放到一个数组里。
 // 被2整除的都是偶数，也就是说余0的都是偶数 求余是%
-const list2 = [1, 3, 2, 7, 6]
-const result = []
 
-for (let i =0; i< list2.length; i++){
-    if(list2[i]%2 == 0){
-        result.push(list2[i])
-    }
-}
-console.log(result)
 
 // 通过遍历生成数组[1, 2, 3, 4, 5]。
 
@@ -201,8 +200,8 @@ function search(keyword){
     return result5
 }
 
-console.log(search('吃鸡'))
-console.log(search('红警'))
+console.log("倒数第二题答案" + search('吃鸡'))
+console.log("倒数第二题答案" + search('红警'))
 
 // 遍历下方数组
 // [
@@ -251,12 +250,13 @@ function search1(keywords){
     const result6 = []
     for(let j =0; j< list5.length;j++){
         if (isSuperSet(list5[j].playing, keywords)) {
+          // 函数里面调用函数
             result6.push(list5[j].name)
         }
     }
     return result6
 }
-
+// isSuperSet 封装了的函数
 function isSuperSet(a,b){
     let is = true
     for(let i =0; i<b.length;i++){
@@ -271,3 +271,5 @@ function isSuperSet(a,b){
 console.log(search1(['CS','红警']))
 console.log(search1(['吃鸡']))
 console.log(search1(['守望屁股', '吃鸡', 'CS']))
+
+

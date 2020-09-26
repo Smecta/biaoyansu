@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除默认格式 */
+        *{
+            margin:0;
+            padding:0;
+        }
+        /* 第一题 */
+        /* 使用定位处理box居中 */
+        /* .box{
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin-left:-100px;
+            margin-top:-100px;
+        } */
+        /* .box{
+            width: 200px;
+            height: 200px;
+            background: blue;
+            position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            margin:auto;
+        } */
+        /* 使用flex布局 父级元素 */
+        /* body{
+            height: 100vh;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background:greenyellow;
+        } */
+        /* 第二题 */
+        /* .container{
+            width: 100%;
+        }
+        .content{
+            background:red;
+            margin-left:200px;
+            margin-right:200px;
+        }
+        .left{
+            background: pink;
+            width: 200px;
+            margin-left:-100%;
+        }
+        .right{
+            background: skyblue;
+            width: 200px;
+            margin-left:-200px;
+        }
+        .main > div{
+            float:left;
+        } */
+        /* 第三题 */
+        /* .main{
+            border:5px solid red;
+            overflow: hidden;
+        }
+        .main:after{
+            content:' ';
+            clear:both;
+            display:block;
+        }
+        .dv1{
+            width: 100px;
+            height: 100px;
+            background: orange;
+            float:left;
+        }
+        .dv2{
+            width: 100px;
+            height: 100px;
+            background: blue; 
+            float:left;
+        }
+        .dv3{
+            width: 100px;
+            height: 100px;
+            background: #000;
+            float:left;
+        }
+        .dv4{
+            clear:both
+        } */
+    </style>
+</head>
+<body>
+    <!-- 面试第一题 -->
+    <!-- <div class="box"></div> -->
+    <!-- 面试第二题 -->
+    <!-- <div class="main">
+        <div class='container'>
+            <div class="content">中间</div>
+        </div>
+        <div class="left">左边</div>
+        <div class="right">右边</div>
+    </div> -->
+    <!-- 面试第三题 -->
+    <!-- <div class="main">
+        <div class="dv1"></div>
+        <div class="dv2"></div>
+        <div class="dv3"></div>
+        <div class="dv4"></div>
+    </div> -->
+    <!-- 面试第四题 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        // var lis = document.getElementsByTagName('li')
+        // console.log(lis)
+        // for(var i=0;i<lis.length;i++){
+        //     // 队列形式，for循环结束后才执行函数
+        //     lis[i].index = i
+        //     console.log(lis[i].index)
+        //     lis[i].onclick = function(){
+        //         console.log(this)
+        //         console.log(this.index)
+        //     }
+        // }
+
+        // for(var i=0;i<3;i++){
+        //     setTimeout(function(){
+        //         console.log(i)
+        //     }, 1000*i)
+        // }
+        // var foo = function(){
+        //     console.log(1)
+        // }
+
+        
+    </script>
+</body>
+</html>

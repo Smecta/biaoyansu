@@ -146,7 +146,71 @@
         //     console.log(1)
         // }
 
+        // var arr = [1,"2","3",3,"3","2",1,"21",21,33]
+        // function unique(arr){
+        //     var brr = [],
+        //         obj = {};
+        //     for(var i=0;i<arr.length;i++){
+        //         console.log(obj[arr[i]])
+        //         if(!obj[arr[i]]){
+        //             obj[arr[i]] = true
+        //             brr.push(arr[i])
+        //         }
+        //     }
+        //     return brr
+        // }
+        // console.log(unique(arr))
+
+        // var set = new Set(arr)
+        // console.log(set)
+
+        // var arr = [1,2,3]
+        // var brr = arr
         
+        // arr[0] = "张三"
+        // console.log(arr,brr)
+        
+        // var obj1 = {
+        //     age:18,
+        //     arr:[1,2,3]
+        // }
+
+        // function copy(obj1){
+        //     var obj2 = {}
+        //     for(var i in obj1){
+        //         obj2[i] = obj1[i]
+        //     }
+        //     return obj2
+        // }
+        // var obj2 = copy(obj1)
+        // obj1.arr[0] = "段"
+        // console.log(obj1.arr,obj2.arr)
+        
+
+        // 递归 深拷贝
+        var obj1 = {
+            age:18,
+            arr:[1,2,3]
+        }
+        var obj2 = {}
+
+        function copy(obj1,obj2){
+
+            for(var i in obj1){
+                // console.log(i)
+                // console.log(obj1[i])
+               if(typeof obj1[i] =='object'){
+                    obj2[i] = (obj1[i].constructor == Array) ? [] : {}
+                    copy(obj1[i],obj2[i])
+               }else{
+                   obj2[i] = obj1[i]
+               }
+            }
+            return obj2
+        }
+        var obj2 = copy(obj1,obj2)
+        obj1.arr[0] = '张三'
+        console.log(obj1.arr,obj2.arr)
     </script>
 </body>
 </html>
